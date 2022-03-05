@@ -21,6 +21,7 @@ Tambien se recomienda mirar luego como llevar la cabo la implementación en dock
 7. https://sensorsiot.github.io/IOTstack/Containers/Mosquitto/
 8. https://docs.foundries.io/73/tutorials/mosquitto.html
 9. https://programozdazotthonod.hu/cookbook/installing-mosquitto/
+10. https://developer.ibm.com/es/articles/iot-mqtt-why-good-for-iot/
 
 #### Instalación
 
