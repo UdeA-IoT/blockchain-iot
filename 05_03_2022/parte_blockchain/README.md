@@ -89,16 +89,37 @@ git clone https://github.com/hyperledger/fabric-samples.git
 
 Install the Hyperledger Fabric platform-specific binaries and config files for the version specified into the /bin and /config directories of fabric-samples
 
-[Aca vamos..........................................................................]
 
 ** Once you are ready, and in the directory into which you will install the Fabric Samples and binaries, go ahead and execute the command to pull down the binaries and images.
 
+Esto toco con el curl de wsl, el de windows no dio.
+El wsl es muy viejo asi que tampoco pasa de la parte relacionada con la invocacion de docker.
+
+
+
+Se volvio a realizar desde la terminal del git de windows.
+
 curl -sSL https://bit.ly/2ysbOFE | bash -s
 
+Ahora si parece que esta mejor la salida.
+
+
+[Aca vamos..........................................................................]
+
+
+https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html# 
+
+You may want to add that to your PATH environment variable so that these can be picked up without fully qualifying the path to each binary. e.g.:
+
+export PATH=<path to download location>/bin:$PATH
+
+Continuara...
+
+https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html
 
 
 
-Download the Hyperledger Fabric docker images for the version specified
+
 
 
 
