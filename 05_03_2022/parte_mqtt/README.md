@@ -130,6 +130,73 @@ conda install -c conda-forge paho-mqtt
 conda install -c conda-forge/label/cf202003 paho-mqtt
 ```
 
+### Prueba con paho
+
+El siguiente script ([light_office_control.py](light_office_control.py)) crea un cliente mqtt usando paho. A continuación se muestra el código:
+
+```python
+import paho.mqtt.client as mqtt
+import time
+
+# Variables de la aplicacion
+BROKER_IP = "127.0.0.1"
+TOPIC = "home/office/lamp"
+messLampOn = "ON"
+messLampOff = "OFF"
+
+# 1. Creacion de la isntanca del cliente
+CLIENT_ID = "officeLamp"
+mqtt_client=mqtt.Client(client_id=CLIENT_ID)
+
+# 2. Incovacion del metodo connect
+mqtt_client.connect(BROKER_IP, 1883, 60)
+
+# 3. Llamando el loop para mantener el flujo de trafico de red en el broker
+# 4. No se llevo a cabo en este caso.
+mqtt_client.loop_start()
+print("SISTEMA DE CONTROL DE LA LAMPARA DE LA OFFICE")
+while True:
+    print("Menu de control de la office " )
+    print("1. Encender lampara" )
+    print("2. Apagar lampara" )
+    print("3. Salir de la aplicacion" )
+    opc = input("Seleccione una opcion: ")
+    if opc == '1':
+        print("--> Encendiendo la lampara\n")
+        mqtt_client.publish(TOPIC,messLampOn)  # Uso de publish para prender la lampara
+    elif opc == '2':
+        print("--> Apagando la lampara\n")
+        mqtt_client.publish(TOPIC,messLampOff) # Uso de publish para apagar la lampara
+    elif opc == '3':
+        print("--> Chao bambino\n")
+        break
+    else:
+        print("--> OPCION INVALIDA\n")
+mqtt_client.loop_stop()
+```
+
+Para realizar la prueba lleve a cabo los siguientes pasos:
+1. Poner a correr el mosquito:
+
+```
+mosquitto
+```
+
+2. Poner a correr el cliente subscriber:
+
+```
+mosquitto_sub -h 127.0.0.1 -t "home/office/lamp"
+```
+
+3. Poner a correr el cliente publisher (script de python):
+
+```
+python3 light_office_control.py
+```
+
+La salida se muestra a continuación.
+
+![salida_cliente](salida_cliente.png)
 
 
 - [ ] Poner a funcionar el mosquitto.
