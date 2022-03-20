@@ -66,19 +66,10 @@ En el documento se exploran los siguientes metodos:
 
 1. **Attribute Based Access Control (ABAC)**: Simplifica el access management en IoT. Se mencionan los siguientes articulos.
    * [A Novel Attribute-Based Access Control Scheme Using Blockchain for IoT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8668769). En la blockchain se preservan atributos como user atributes, resource atributes y object atributes based on users' requeriments. El ABAC extrae las singularidades o representaciones en un conjunto de atributos los cuales son publicados por el attribute authority.
-   * 
+   * [An Attribute-Based Collaborative Access Control Scheme Using Blockchain for IoT Devices](https://www.mdpi.com/2079-9292/9/2/285/htm): El control basado en atributos se basa en cinco componentes principales llamados Consortium Blockchain Network, Authority Nodes (AN), IoT Devices, Chaincode and Public Ledger and Access Tree.
 
-
-design is proposed to make access management
-
-simpler in IoT [6]. In this work, blockchain technology is implemented to append and preserve the distribution of attributes that includes user attributes, resource attributes and
-
-object attributes based on user’s requirement. ABAC extracts uniqueness or representations
-into a set of attributes which are published by attribute authority.
-
-
-2. **Fair Access**
-3. **Distributed Access Control**
+2. **Fair Access - Acceso justo**: Facilita el control de los usuarios sobre sus propios datos al introducir una tecnologia no centralizada **completely pseudonymus**. Se menciona el articulo FairAccess: a new Blockchain-based access control framework for the Internet of Things ([link](https://asset-pdf.scinapse.io/prod/2588585573/2588585573.pdf)).
+3. **Distributed Access Control**: 
 4. **Distributed Key Management**
 5. **Token Based Access Control**
 6. **Control Chain**
