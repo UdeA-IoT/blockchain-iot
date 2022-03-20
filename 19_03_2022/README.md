@@ -1,7 +1,7 @@
 
 # Apuntes del articulo
 
-> Articulo analizado: 
+> Articulo analizado: Blockchain for IoT Access Control, Security and Privacy: A Review ([link](https://link.springer.com/article/10.1007/s11277-020-07947-2))
 
 El paper describe y analiza las tecnicas control de acceso en IoT basadas en blockchain. Para ello explora casos de uso en dos escenarios principales; el control de acceso para IoT y otros casos de uso como vehicular had hot networks, healcare aund supply chains. Aqui se discute por que puede ser usada una Blockchain para implementar de manera eficiente el control de acceso en IoT.
 
