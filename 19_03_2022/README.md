@@ -1,6 +1,8 @@
 
 # Apuntes del articulo
 
+> Articulo analizado: 
+
 El paper describe y analiza las tecnicas control de acceso en IoT basadas en blockchain. Para ello explora casos de uso en dos escenarios principales; el control de acceso para IoT y otros casos de uso como vehicular had hot networks, healcare aund supply chains. Aqui se discute por que puede ser usada una Blockchain para implementar de manera eficiente el control de acceso en IoT.
 
 
@@ -49,7 +51,15 @@ Su función principal es mantener la integridad de la blockchain. Los concensos 
 4. **Proof of Elapsed Time (PoET)**: nodes who have fonished specifc waiting period administers the network.
 5. **Delegated Proof of Stake (DPoS)**: Nodes elected by delegates through voting administers the network.
 
+La siguiente figura resume ([link](https://www.affde.com/es/blockchain-consensus-algorithms-guide.html)) algunos casos:
+
+![consensos](https://www.affde.com/uploads/article/180780/qG4PnERNcZsFa4G7.png)
+
+En el articulo **Cryptographic consensus mechanisms** ([link](aggarwal2020.pdf)) se muestran mas detalles al respecto.
+
 ### Algunos simuladores
+
+Aunque esto no se habla en el articulo, se agregó esta parte para comprender un poco mejor el funcionamiento de blockchain.
 
 1. https://blockchaindemo.io/
 2. http://blockchain.mit.edu/
@@ -68,8 +78,9 @@ En el documento se exploran los siguientes metodos:
    * [A Novel Attribute-Based Access Control Scheme Using Blockchain for IoT](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8668769). En la blockchain se preservan atributos como user atributes, resource atributes y object atributes based on users' requeriments. El ABAC extrae las singularidades o representaciones en un conjunto de atributos los cuales son publicados por el attribute authority.
    * [An Attribute-Based Collaborative Access Control Scheme Using Blockchain for IoT Devices](https://www.mdpi.com/2079-9292/9/2/285/htm): El control basado en atributos se basa en cinco componentes principales llamados Consortium Blockchain Network, Authority Nodes (AN), IoT Devices, Chaincode and Public Ledger and Access Tree.
 
-2. **Fair Access - Acceso justo**: Facilita el control de los usuarios sobre sus propios datos al introducir una tecnologia no centralizada **completely pseudonymus**. Se menciona el articulo FairAccess: a new Blockchain-based access control framework for the Internet of Things ([link](https://asset-pdf.scinapse.io/prod/2588585573/2588585573.pdf)).
-3. **Distributed Access Control**: 
+2. **Fair Access - Acceso justo**: Facilita el control de los usuarios sobre sus propios datos al introducir una tecnologia no centralizada **completely pseudonymus**. Se menciona el articulo **FairAccess: a new Blockchain-based access control framework for the Internet of Things** ([link](https://asset-pdf.scinapse.io/prod/2588585573/2588585573.pdf)).
+3. **Distributed Access Control**: Se proporciona control de acceso descentralizado enlazando redes de sensores geograficamente distribuidas (combination of Wire-
+less Sensor Networks, Manager Nodes, Agent node, Smart contract, Blockchain network and Management hubs.). Esta es una combinación de . Se resume el articulo **Blockchain Meets IoT: An Architecture for Scalable Access Management in IoT** ([link](https://www.ericsson.com/en/reports-and-papers/research-papers/blockchain-meets-iot-an-architecture-for-scalable-access-management-in-iot)). Tambien se analiza el articulo **Dynamic Access Control Scheme for IoT Devices using Blockchain** ([link](https://ieeexplore.ieee.org/abstract/document/8539659))
 4. **Distributed Key Management**
 5. **Token Based Access Control**
 6. **Control Chain**
