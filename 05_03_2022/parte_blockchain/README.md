@@ -1,6 +1,60 @@
-- [ ] Instalar una blockchain privada
 
 
+
+## Instalar Hyperledger
+
+### Objetivos 
+
+- [ ] Instalar una blockchain privada.
+- [ ] Documentar brevemente el procedimiento.
+- [ ] Hacer una prueba sencilla donde se muestre el correcto funcionamiento
+
+### Documentación breve del procedimiento de instalación
+
+La instalación de hyperledger, descrita en este apartado, se realizo en una maquina con las siguientes caracteristicas:
+
+![maquina](maquina.png)
+
+La instalación se llevo a cabo siguiendo los enlaces propuestos al final del documento, sin embargo, de estos el mas importante es el suministrado en la documentación oficial de hyperledger en: [Hyperledger Fabric - Getting Started](https://hyperledger-fabric.readthedocs.io/en/release-1.4/getting_started.html).
+
+**Prerequisitos**
+
+Los prerequisitos de instalación se describen en el siguiente [enlace](https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html). De modo que la tarea inicial es llevar a cabo la instalación de todos estos. En una maquina linux es mas simple, en una maquina Windows hay que hace mas marañanas. En todo caso, suponiendo que se realizo la instalación con exito de todos los prerequisitos es bueno verificar que estos funcionen correctamente. A continuación se muestra de manera resumida los comandos empleados para esto:
+
+
+|Prerequisito|Comando|
+|---|---|
+|curl|```curl --version```|
+|Docker|```docker --version```|
+|Docker Compose |```docker-compose --version```|
+|Golang |```go version```|
+|Nodejs |```node -v```|
+|NPM |```npm -v```|
+
+Tener en cuenta las recomentaciones sobre python que se dan en la documentación.
+
+En la sección de **Windows extras** se describen unos pasos necesarios antes de clonar con git. Tal y como se dice aqui, la recomendación es usar el git bash de modo que si no lo tiene instalado ([link](https://gitforwindows.org/)) en su maquina windows instalelo y procesa a ejecutar allí todos los comandos git que se muestran a continuación:
+
+```
+# Before running any git clone commands
+git config --global core.autocrlf false
+git config --global core.longpaths true
+
+# check the settings of anteriores commands
+git config --get core.autocrlf
+git config --get core.longpaths
+``` 
+
+**Proceso de instalación**
+
+
+
+## Enlaces
+* https://www.codementor.io/@arvindmaurya/hyperledger-fabric-on-windows-1hjjorw68p
+* https://medium.com/@harismumtaz_19503/step-by-step-hyperledger-fabric-installation-on-windows-10-7ad462cea89c
+* https://hyperledger-fabric.readthedocs.io/en/release-1.4/getting_started.html
+  
+<!---
 Prerequisites (https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html)
 cURL — latest version (ok)
 Docker — version 17.06.2-ce or greater (ok)
@@ -137,3 +191,5 @@ https://medium.com/@harismumtaz_19503/step-by-step-hyperledger-fabric-installati
 https://hyperledger-fabric.readthedocs.io/en/release-1.4/prereqs.html
 https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html
 https://hackernoon.com/hyperledger-fabric-installation-guide-74065855eca9
+
+--->
