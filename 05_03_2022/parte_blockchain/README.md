@@ -47,6 +47,51 @@ git config --get core.longpaths
 
 **Proceso de instalación**
 
+Se elige la localización donde se va a realizar la instalacion (en nuestro caso```cd /c/Users/Usuario/Documents/Bertico/tesis_iot-blockain/repositorios/blockchain-iot/```). Luego se lleva a cabo la ejecución del siguiente comando:
+
+```
+curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9
+```
+
+Puede ser util chequear el directorio bin del directorio descargado y procesado (```fabric-samples```) con el fin de verificar que se hayan generado los ejecutables:
+
+```
+$ ls bin/
+configtxgen.exe*  configtxlator.exe*  cryptogen.exe*  discover.exe*  fabric-ca-client*  fabric-ca-server*  ledgerutil.exe*  orderer.exe*  osnadmin.exe*  peer.exe*
+```
+
+Luego se procese a agregar al path la ruta anterior: ```export PATH=<path to download location>/bin:$PATH```, para nuestro caso la ruta sera ```C:\Users\Usuario\Documents\Bertico\tesis_iot-blockain\repositorios\fabric-samples\bin```
+
+Luego se debe realizar el proceso documentado para evitar el error **Docker : Error response from daemon: user declined directory sharing**, la solución se presenta en el siguiente [link](https://stackoverflow.com/questions/70877785/docker-error-response-from-daemon-user-declined-directory-sharing), para esto se pone a compartir el directorio **fabric-samples** tal y como se muestra en la siguiente imagen
+
+![share](file_sharing_docker.png)
+
+
+### Test
+
+Se va a proceder a realizar el test de acuerdo a lo descrito en la pagina: [Using the Fabric test network
+](https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html). 
+
+```
+cd fabric-samples/test-network
+```
+
+```
+./network.sh down
+```
+
+```
+./network.sh up
+```
+
+```
+$ docker ps -a
+CONTAINER ID   IMAGE                               COMMAND             CREATED              STATUS              PORTS                                                        NAMES
+45923d32f655   hyperledger/fabric-tools:latest     "/bin/bash"         About a minute ago   Up About a minute                                                                cli
+42b24c7c5860   hyperledger/fabric-peer:latest      "peer node start"   About a minute ago   Up About a minute   0.0.0.0:9051->9051/tcp, 7051/tcp, 0.0.0.0:19051->19051/tcp   peer0.org2.example.com
+aa70d7ffd022   hyperledger/fabric-orderer:latest   "orderer"           About a minute ago   Up About a minute   0.0.0.0:7050->7050/tcp, 0.0.0.0:17050->17050/tcp             orderer.example.com
+50c513d962d0   hyperledger/fabric-peer:latest      "peer node start"   About a minute ago   Up About a minute   0.0.0.0:7051->7051/tcp, 0.0.0.0:17051->17051/tcp             peer0.org1.example.com
+```
 
 
 ## Enlaces
